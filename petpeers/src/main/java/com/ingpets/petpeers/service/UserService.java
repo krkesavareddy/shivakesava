@@ -19,6 +19,10 @@ public class UserService{
 		currentUser.setUserName(registrationRequest.getUserName());
 		currentUser.setUserPassword(registratinRequest.getUserpassword());
 		userRepository.save(currentUser);
-		
+	}
+
+	public List<> listAllMyPets(int userId){
+
+		return userRepository.findByUserId(userId);
 	}
 }

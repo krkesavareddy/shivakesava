@@ -36,6 +36,14 @@ public class UserController{
 		userService.createUser(registrationRequest);
 		return new ResponseEntity("User Profile Created Sucessfully",HttpStatus.CREATED);
        	}
+
+
+	// see  list of pets owned by the user
+	
+	public List<Pet> listOfMyPets(@PathId int userId){
+
+		return userService.allMypets(userId);
+	}
 }
 
 
